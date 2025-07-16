@@ -1,0 +1,302 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Light theme (default) */
+.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-theme .app {
+  background-color: #f5f5f5;
+}
+
+/* Dark theme */
+.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-theme .app {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .timetable {
+  background-color: #2d2d2d;
+}
+
+.dark-theme .timetable-header {
+  background-color: #333;
+  border-bottom-color: #444;
+}
+
+.dark-theme .date-display h2 {
+  color: #ffffff;
+}
+
+.dark-theme .date-display p {
+  color: #ccc;
+}
+
+.dark-theme .nav-button {
+  color: #4a9eff;
+}
+
+.dark-theme .nav-button:hover {
+  background-color: #2a2a2a;
+}
+
+.dark-theme .period-card {
+  background-color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .period-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .period-card.current {
+  border-left-color: #4a9eff;
+}
+
+.dark-theme .period-name {
+  color: #ffffff;
+}
+
+.dark-theme .period-subject {
+  color: #ccc;
+}
+
+.dark-theme .period-time {
+  color: #999;
+}
+
+.dark-theme .detail-item {
+  color: #ccc;
+}
+
+.dark-theme .period-past {
+  background-color: #2a2a2a;
+  color: #888;
+}
+
+.dark-theme .period-past .period-name {
+  color: #888;
+}
+
+.dark-theme .period-current {
+  background: linear-gradient(135deg, #333 0%, #2a2a3a 100%);
+  border-color: #4a9eff;
+}
+
+.dark-theme .period-future {
+  background-color: #333;
+}
+
+.dark-theme .current-period-indicator {
+  background-color: #333;
+  border-top-color: #444;
+}
+
+.dark-theme .progress-bar {
+  background-color: #444;
+}
+
+.dark-theme .current-period-indicator p {
+  color: #ccc;
+}
+
+.dark-theme .settings {
+  background-color: #2d2d2d;
+}
+
+.dark-theme .settings-header {
+  background-color: #333;
+  border-bottom-color: #444;
+}
+
+.dark-theme .settings-header h1 {
+  color: #ffffff;
+}
+
+.dark-theme .add-button {
+  background-color: #4a9eff;
+  color: white;
+}
+
+.dark-theme .add-button:hover {
+  background-color: #3a8eef;
+}
+
+.dark-theme .timetables-section h2 {
+  color: #ffffff;
+}
+
+.dark-theme .empty-state {
+  color: #ccc;
+}
+
+.dark-theme .empty-state svg {
+  color: #666;
+}
+
+.dark-theme .create-first-button {
+  background-color: #4a9eff;
+  color: white;
+}
+
+.dark-theme .create-first-button:hover {
+  background-color: #3a8eef;
+}
+
+.dark-theme .timetable-item {
+  background-color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .timetable-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .timetable-item.active {
+  border-color: #4a9eff;
+  background-color: #2a2a3a;
+}
+
+.dark-theme .timetable-info h3 {
+  color: #ffffff;
+}
+
+.dark-theme .timetable-info p {
+  color: #ccc;
+}
+
+.dark-theme .action-button {
+  border-color: #555;
+  color: #ccc;
+}
+
+.dark-theme .action-button:hover {
+  background-color: #2a2a2a;
+  color: #4a9eff;
+}
+
+.dark-theme .action-button.delete:hover {
+  background-color: #3a2a2a;
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.dark-theme .periods-section h2 {
+  color: #ffffff;
+}
+
+.dark-theme .period-item {
+  background-color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .period-info h4 {
+  color: #ffffff;
+}
+
+.dark-theme .period-info p {
+  color: #ccc;
+}
+
+.dark-theme .period-time {
+  color: #999;
+}
+
+.dark-theme .delete-period-button {
+  color: #999;
+}
+
+.dark-theme .delete-period-button:hover {
+  background-color: #3a2a2a;
+  color: #ff6b6b;
+}
+
+.dark-theme .modal {
+  background-color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .modal h2 {
+  color: #ffffff;
+}
+
+.dark-theme .modal input {
+  background-color: #444;
+  border-color: #555;
+  color: #ffffff;
+}
+
+.dark-theme .modal input:focus {
+  border-color: #4a9eff;
+}
+
+.dark-theme .time-inputs span {
+  color: #ccc;
+}
+
+.dark-theme .modal-actions button:first-child {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+.dark-theme .modal-actions button:last-child {
+  background-color: #4a9eff;
+  color: white;
+}
+
+.dark-theme .navigation {
+  background-color: #333;
+  border-top-color: #444;
+}
+
+.dark-theme .nav-item {
+  color: #ccc;
+}
+
+.dark-theme .nav-item:hover {
+  color: #4a9eff;
+  background-color: #2a2a2a;
+}
+
+.dark-theme .nav-item.active {
+  color: #4a9eff;
+}
+
+/* Animation for page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+} 

@@ -1,0 +1,165 @@
+.period-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.period-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.period-card.current {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-left-color: #007bff;
+}
+
+.period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.period-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.current-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #007bff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.period-content {
+  position: relative;
+  z-index: 2;
+}
+
+.period-name {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.period-subject {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.period-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.progress-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 123, 255, 0.1), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.progress-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: height 0.3s ease;
+  opacity: 0.3;
+}
+
+.period-color-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Status-based styling */
+.period-past {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.period-past .period-name {
+  color: #6c757d;
+}
+
+.period-current {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border: 2px solid #007bff;
+}
+
+.period-future {
+  background-color: white;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .period-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .period-name {
+    font-size: 16px;
+  }
+  
+  .period-time {
+    font-size: 13px;
+  }
+} 
