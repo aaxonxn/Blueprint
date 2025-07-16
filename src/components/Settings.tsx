@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Plus, Edit, Trash2, Calendar, Clock, ChevronDown, ChevronUp, Coffee, Sun, Moon } from 'lucide-react';
-import { TimetableData, Period, DaySchedule } from '../types/timetable';
+import { Plus, Trash2, Calendar, Clock, ChevronDown, ChevronUp, Coffee, Sun, Moon } from 'lucide-react';
+import { TimetableData, Period } from '../types/timetable';
 import { useTheme } from '../App';
 import './Settings.css';
 
@@ -8,14 +8,12 @@ interface SettingsProps {
   timetables: TimetableData[];
   setTimetables: (timetables: TimetableData[]) => void;
   currentTimetableId: string;
-  setCurrentTimetableId: (id: string) => void;
 }
 
 const Settings: React.FC<SettingsProps> = ({
   timetables,
   setTimetables,
   currentTimetableId,
-  setCurrentTimetableId
 }) => {
   const { isDarkTheme, toggleTheme } = useTheme();
   const [showWeeklyTimetable, setShowWeeklyTimetable] = useState(false);

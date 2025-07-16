@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import { useState, createContext, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Timetable from './components/Timetable';
 import Settings from './components/Settings';
@@ -51,7 +51,6 @@ function App() {
                     timetables={timetables}
                     setTimetables={setTimetables}
                     currentTimetableId={currentTimetableId}
-                    setCurrentTimetableId={setCurrentTimetableId}
                   />
                 } 
               />

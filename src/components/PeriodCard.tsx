@@ -2,7 +2,6 @@ import React from 'react';
 import { Clock, MapPin, User } from 'lucide-react';
 import { Period } from '../types/timetable';
 import { formatTime } from '../utils/timeUtils';
-import { useTheme } from '../App';
 import './PeriodCard.css';
 
 interface PeriodCardProps {
@@ -18,8 +17,6 @@ const PeriodCard: React.FC<PeriodCardProps> = ({
   isCurrent, 
   progress 
 }) => {
-  const { isDarkTheme } = useTheme();
-
   const getStatusClass = () => {
     switch (status) {
       case 'past':

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { TimetableData, Period } from '../types/timetable';
+import { TimetableData } from '../types/timetable';
 import { getCurrentPeriodInfo, getPeriodStatus, formatDate, getNextDay, getPreviousDay } from '../utils/timeUtils';
-import { useTheme } from '../App';
 import PeriodCard from './PeriodCard';
 import './Timetable.css';
 
@@ -18,7 +17,6 @@ const Timetable: React.FC<TimetableProps> = ({
   currentTimetableId, 
   setCurrentTimetableId 
 }) => {
-  const { isDarkTheme } = useTheme();
   const [currentDate, setCurrentDate] = useState(format(new Date(), 'yyyy-MM-dd'));
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);

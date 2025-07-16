@@ -1,13 +1,11 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Calendar, Settings } from 'lucide-react';
-import { useTheme } from '../App';
 import './Navigation.css';
 
 const Navigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { isDarkTheme } = useTheme();
 
   const isActive = (path: string) => location.pathname === path;
 

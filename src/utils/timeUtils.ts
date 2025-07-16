@@ -1,4 +1,4 @@
-import { format, parse, isToday, addDays, subDays, startOfDay } from 'date-fns';
+import { format, parse, isToday, addDays, subDays } from 'date-fns';
 import { Period, CurrentPeriodInfo } from '../types/timetable';
 
 export const formatTime = (time: string): string => {
