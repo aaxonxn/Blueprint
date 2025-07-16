@@ -30,5 +30,8 @@
   },
   "keywords": ["timetable", "college", "react", "typescript"],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  }
 } 
